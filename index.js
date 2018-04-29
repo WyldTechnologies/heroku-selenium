@@ -11,7 +11,6 @@ app.get('/test', function (req, res) {
         .build();
     driver.get('http://demo0.wyldmesh.net:8001/');
     driver.findElement(By.xpath("//a[@ui-sref='comms']")).click();
-    //driver.findElement(By.name('btnG')).click();
     driver.wait(function() {
         return driver.getTitle().then(function(title) {
             console.log('> ',title);
