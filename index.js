@@ -9,13 +9,13 @@ app.get('/test', function (req, res) {
     var driver = new webdriver.Builder()
         .forBrowser('phantomjs')
         .build();
-    driver.get('http://www.google.com/ncr');
-    driver.findElement(By.name('q')).sendKeys('webdriver');
-    driver.findElement(By.name('btnG')).click();
+    driver.get('http://demo0.wyldmesh.net:8001/');
+    driver.findElement(By.xpath("//a[@ui-sref='comms']")).click();
+    //driver.findElement(By.name('btnG')).click();
     driver.wait(function() {
         return driver.getTitle().then(function(title) {
             console.log('> ',title);
-            return title === 'webdriver - Google Search';
+            return title === 'Wyld Demo: Comms';
         });
     }, 5000).then(function() {
         res.status(200).send('Done');
