@@ -9,14 +9,13 @@ app.get('/test', function (req, res) {
     var driver = new webdriver.Builder()
         .forBrowser('phantomjs')
         .build();
-    driver.get('http://demo0.wyldmesh.net:8001/');
-    //driver.findElement(By.xpath("//a[@ui-sref='comms']")).click();
+    driver.get('http://demo0.wyldmesh.net:8001/comms');
     driver.wait(function() {
         return driver.getTitle().then(function(title) {
             console.log('> ',title);
-            return title === 'Wyld Demo: Dashboard';
+            return title === 'Wyld Demo: Comms';
         });
-    }, 5000).then(function() {
+    }, 10000).then(function() {
         res.status(200).send('Done');
     }, function(error) {
         res.status(200).send(error);
