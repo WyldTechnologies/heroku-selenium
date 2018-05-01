@@ -5,10 +5,14 @@ var app = express()
 var port = process.env.PORT || 14000;
 var By = webdriver.By;
 
+var chromeCapabilities = webdriver.Capabilities.chrome();
+var chromeOptions = {
+    'args': ['--test-type', '--start-maximized']
+};
+chromeCapabilities.set('chromeOptions', chromeOptions);
+
 app.get('/test', function (req, res) {
-    var driver = new webdriver.Builder()
-        .forBrowser('phantomjs')
-        .build();
+    var driver = new webdriver.Builder().withCapabilities(chromeCapabilities).build();
     driver.get('http://demo0.wyldmesh.net:8001/comms');
     driver.wait(function() {
         return driver.getTitle().then(function(title) {
