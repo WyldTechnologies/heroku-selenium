@@ -7,7 +7,8 @@ var By = webdriver.By;
 
 var chromeCapabilities = webdriver.Capabilities.chrome();
 var chromeOptions = {
-    'args': ['--test-type', '--start-maximized']
+    //'args': ['--test-type', '--start-maximized']
+	'args': ['--headless']
 };
 chromeCapabilities.set('chromeOptions', chromeOptions);
 
