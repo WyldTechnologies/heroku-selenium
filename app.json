@@ -7,15 +7,11 @@
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "date > date.txt",
-        "test": "cat date.txt"
+        "test": "npm test"
       },
       "buildpacks": [
         { "url": "heroku/nodejs" },
-        { "url": "https://github.com/stomita/heroku-buildpack-phantomjs" },
-		{ "url": "https://github.com/heroku/heroku-buildpack-google-chrome"},
-		{ "url": "https://github.com/heroku/heroku-buildpack-chromedriver"},
-		{ "url": "https://github.com/heroku/heroku-buildpack-xvfb-google-chrome"}
+        { "url": "https://github.com/stomita/heroku-buildpack-phantomjs" }
       ]
     }
   }
