@@ -15,7 +15,7 @@
     "selenium-webdriver": "^3.4.0"
   },
   "engines": {
-    "node": "6.11.1",
+    "node": "4.7.0",
     "npm": "4.5.0"
   },
   "devDependencies": {

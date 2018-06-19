@@ -4,7 +4,7 @@ var webdriver = require('selenium-webdriver');
 	
 var driver;
 
-test.describe('Test001-Verify Page Title', function(){
+test.describe('Test001-Verify Home Page Title', function(){
 	
 	test.beforeEach(function(done){
 		this.timeout(20000);
@@ -14,7 +14,7 @@ test.describe('Test001-Verify Page Title', function(){
 		done();
 	});
 	
-	test.it('assert page title', function(done){
+	test.it('assert Home page title', function(done){
 		var promise = driver.getTitle();
 		promise.then(function(title){
 			console.log('page title is: ' + title);
