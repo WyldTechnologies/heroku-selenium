@@ -7,7 +7,7 @@ var driver;
 test.describe('Test001-Verify Home Page Title', function(){
 	
 	test.beforeEach(function(done){
-		this.timeout(20000);
+		//this.timeout(20000);
 		driver=new webdriver.Builder().forBrowser('phantomjs').build();
 		driver.get('http://wyldtechnologies.com/').then(function(){
 		console.log('driver instantiated');});
