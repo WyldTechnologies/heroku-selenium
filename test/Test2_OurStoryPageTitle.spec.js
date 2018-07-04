@@ -4,10 +4,10 @@ var webdriver = require('selenium-webdriver');
 	
 var driver;
 
-test.describe('Test001-Verify Our Story Page Title', function(){
+test.describe('Test002-Verify Our Story Page Title', function(){
 	
 	test.beforeEach(function(done){
-		this.timeout(20000);
+		this.timeout(50000);
 		driver=new webdriver.Builder().forBrowser('phantomjs').build();
 		driver.get('http://wyldtechnologies.com/wyld-story.html').then(function(){
 		console.log('driver instantiated');});
