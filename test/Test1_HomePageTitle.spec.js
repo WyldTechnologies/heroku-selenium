@@ -5,6 +5,7 @@ var webdriver = require('selenium-webdriver');
 var driver;
 
 test.describe('Test001-Verify Home Page Title', function(){
+	
 /*	var chromeCapabilities = webdriver.Capabilities.chrome();
 	var chromeOptions = {
     'args': ['--test-type', '--start-maximized'],

@@ -8,7 +8,8 @@ test.describe('Test002-Verify Our Story Page Title', function(){
 	
 	test.beforeEach(function(done){
 		this.timeout(50000);
-		driver=new webdriver.Builder().forBrowser('phantomjs').build();
+		//driver=new webdriver.Builder().forBrowser('phantomjs').build();
+		driver=new webdriver.Builder().forBrowser('chrome').usingServer('http://localhost:4444/wd/hub').build();
 		driver.get('http://wyldtechnologies.com/wyld-story.html').then(function(){
 		console.log('driver instantiated');});
 		done();
