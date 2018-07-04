@@ -5,10 +5,17 @@ var webdriver = require('selenium-webdriver');
 var driver;
 
 test.describe('Test001-Verify Home Page Title', function(){
-	
+	var chromeCapabilities = webdriver.Capabilities.chrome();
+	var chromeOptions = {
+    'args': ['--test-type', '--start-maximized']
+	//'args': ['--headless']
+	};
+	chromeCapabilities.set('chromeOptions', chromeOptions);
+
 	test.beforeEach(function(done){
 		this.timeout(50000);
-		driver=new webdriver.Builder().forBrowser('phantomjs').build();
+		//driver=new webdriver.Builder().forBrowser('phantomjs').build();
+		driver = new webdriver.Builder().withCapabilities(chromeCapabilities).build();
 		driver.get('http://wyldtechnologies.com/').then(function(){
 		console.log('driver instantiated');});
 		done();
