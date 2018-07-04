@@ -18,7 +18,8 @@ test.describe('Test001-Verify Home Page Title', function(){
 		//driver=new webdriver.Builder().forBrowser('phantomjs').build();
 		//driver = new webdriver.Builder().withCapabilities(chromeCapabilities).build();
 		driver=new webdriver.Builder().forBrowser('chrome').usingServer('http://localhost:4444/wd/hub').build();
-		driver.get('http://wyldtechnologies.com/').then(function(){
+		//driver.get('http://wyldtechnologies.com/').then(function(){
+		driver.get('https://demo0.wyldmesh.net:8443/comms').then(function(){
 		console.log('driver instantiated');});
 		done();
 	});
@@ -26,8 +27,8 @@ test.describe('Test001-Verify Home Page Title', function(){
 	test.it('assert Home page title', function(done){
 		var promise = driver.getTitle();
 		promise.then(function(title){
-			console.log('page title is: ' + title);
-			assert.equal(title,'Wyld Technologies');
+			console.log('Home page title is: ' + title);
+			assert.equal(title,'Wyld Mesh: Feed');
 		});
 		done();
 	});
