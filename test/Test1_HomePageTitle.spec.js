@@ -7,8 +7,8 @@ var driver;
 test.describe('Test001-Verify Home Page Title', function(){
 	var chromeCapabilities = webdriver.Capabilities.chrome();
 	var chromeOptions = {
-    'args': ['--test-type', '--start-maximized']
-	//'args': ['--headless']
+    'args': ['--test-type', '--start-maximized'],
+	'args': ['--headless']
 	};
 	chromeCapabilities.set('chromeOptions', chromeOptions);
 
