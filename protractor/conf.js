@@ -1,10 +1,15 @@
 // conf.js
 exports.config = {
   framework: 'jasmine',
-  //seleniumAddress: 'http://localhost:4444/wd/hub',
-  directConnect: true,
-  specs: ['spec.js'],
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['./specs/*.js'],
   capabilities: {
-    browserName: 'chrome'
-  }
+    browserName: 'chrome',
+	chromeOptions: {
+		args: ["--headless"]
+		}
+  },
+  jasmineNodeOpts: {
+    defaultTimeoutInterval: 50000
+	}
 }
