@@ -7,7 +7,6 @@ var app = express();
 var mocha = require('mocha');
 	describe = require('mocha').describe,
 	it = require('mocha').it;
-var chai = require('chai');
 
 var chromeCapabilities = webdriver.Capabilities.chrome();
 var chromeOptions = {
@@ -29,8 +28,8 @@ chromeCapabilities.set('chromeOptions', chromeOptions);
 	describe('Test001-Verify Page Title', function(){
 		
 	it('navigate to Wyld Technologies home page', function(){
-		driver.get('http://wyldtechnologies.com/').then(function(){
-		console.log('driver instantiated')
+		driver.get('https://wyldtechnologies.com/').then(function(){
+		console.log('navigated to secured Wyld Technologies website');
 		});
 	});
 	
