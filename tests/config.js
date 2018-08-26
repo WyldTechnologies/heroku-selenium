@@ -9,6 +9,7 @@ exports.config = {
     capabilities: {
         browserName:'chrome',
 		chromeOptions: {
+		binary:'/app/.apt/usr/bin/google-chrome',
 		args: ["--headless"]
 		}
     },
