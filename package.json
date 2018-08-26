@@ -7,7 +7,7 @@
     "download_webdriver_manager": "webdriver-manager update",
     "start_webdriver_manager": "webdriver-manager start",
     "start": "node index.js",
-    "test": "npm run download_webdriver_manager && npm run start_webdriver_manager && protractor tests/config.js"
+    "test": "npm run download_webdriver_manager && protractor tests/config.js"
   },
   "license": "ISC",
   "dependencies": {
