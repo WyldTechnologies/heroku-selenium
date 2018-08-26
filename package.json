@@ -1,24 +1,22 @@
 {
-  "name": "heroku-selenium-node",
+  "name": "wyld.automation",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "download_webdriver_manager": "webdriver-manager update",
+    "start_webdriver_manager": "webdriver-manager start",
     "start": "node index.js",
-    "test": "mocha \"./test/*.spec.js\" --timeout 20000"
+    "test": "protractor tests/config.js"
   },
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.3",
-    "selenium-webdriver": "^3.4.0"
+    "protractor": "^5.4.0"
   },
   "engines": {
     "node": "6.14.3",
     "npm": "4.5.0"
-  },
-  "devDependencies": {
-    "mocha": "^5.2.0"
   }
 }
