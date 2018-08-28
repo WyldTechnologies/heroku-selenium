@@ -1,7 +1,7 @@
-describe('demo001-Verify Home Page Title', function(){
+describe('test0-verify successful login', function(){
 	var EC = protractor.ExpectedConditions;
 	beforeAll(function(){
-		browser.get('https://demo0.wyldmesh.net/admin');
+		browser.get('https://test0.wyldmesh.net:8443/admin');
 		console.log('Browser Launched');
 	});
 	it('assert Login page title', function() {	
@@ -12,9 +12,9 @@ describe('demo001-Verify Home Page Title', function(){
 		element(by.id('username')).sendKeys('raheel.modassar');
 		element(by.id('password')).sendKeys('password');
 		element(by.id('login-submit')).click();
-		browser.wait(EC.urlIs('https://demo0.wyldmesh.net/'), 20000);
+		browser.wait(EC.urlIs('https://test0.wyldmesh.net:8443/'), 20000);
 		expect(browser.getTitle()).toEqual('Wyld Mesh: Home');
-		expect(browser.getCurrentUrl()).toEqual('https://demo0.wyldmesh.net/');
+		//expect(browser.getCurrentUrl()).toEqual('https://test0.wyldmesh.net:8443/');
 		console.log('Navigated to Home page');
 	});
 	afterAll(function(){
